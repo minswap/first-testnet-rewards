@@ -52,6 +52,6 @@ for (const [addr, actionCount] of Object.entries(addrToActionCount)) {
   const mintRewards = (TOTAL_MINT * actionCount) / totalActions;
   fs.appendFileSync(
     "output.csv",
-    `${mainnetAddr},${Number(mintRewards) / 1e6}\n`
+    `${addr},${mainnetAddr},${Number(mintRewards) / 1e6}\n`
   );
 }
